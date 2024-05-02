@@ -1,14 +1,14 @@
 ﻿namespace TestBA
 {
-    class Box
+    public class Box
     {
         public int Id { get; }
         public int Width { get; }
         public int Length { get; }
         public int Height { get; }
         public double Weight { get; }
-        public DateTime expiration_date;
-        public DateTime production_date;
+        DateTime expiration_date;
+        DateTime production_date;
 
         static int shelfLife = 100;
 

@@ -1,18 +1,18 @@
 ﻿namespace TestBA
 {
-    class Pallet
+    public class Pallet
     {
         public int Id { get; }
         public int Width { get; }
         public int Length { get; }
         public int Height { get; }
         double weight;
-        public double Weight 
-        { 
-            get 
-            { 
-                return weight; 
-            } 
+        public double Weight
+        {
+            get
+            {
+                return weight;
+            }
         }
         long boxVolume;
         public long Volume
@@ -22,7 +22,7 @@
                 return boxVolume + (long)Width * Length * Height;
             }
         }
-        public List<Box> Boxes;
+        List<Box> Boxes;
         DateOnly expirationDate;
         public DateOnly ExpirationDate
         {
@@ -51,6 +51,14 @@
                 }
                 boxVolume += box.Volume;
                 weight += box.Weight;
+            }
+        }
+
+        public Box this[int i]
+        {
+            get
+            {
+                return Boxes[i];
             }
         }
     }
