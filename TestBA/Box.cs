@@ -33,5 +33,18 @@
                 return (long)Width * Length * Height;
             }
         }
+
+        public Box() { }
+
+        public Box(int id, int width, int length, int height, double weight, DateTime expirationDate, DateTime productionDate)
+        {
+            Id = id;
+            Width = width;
+            Length = length;
+            Height = height;
+            Weight = weight;
+            expiration_date = expirationDate;
+            production_date = productionDate;
+        }
     }
 }
